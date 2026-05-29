@@ -3,7 +3,7 @@ builder = "NIXPACKS"
 buildCommand = "pip install -r requirements.txt && (test -f data/restaurants.parquet || python -m src.data.loader --ingest)"
 
 [deploy]
-startCommand = "uvicorn src.api.main:app --host 0.0.0.0 --port $PORT"
+startCommand = "python run_api.py"
 healthcheckPath = "/health"
-healthcheckTimeout = 120
+healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"

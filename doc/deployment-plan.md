@@ -127,7 +127,17 @@ python -m src.data.loader --ingest || test -f data/restaurants.parquet
 
 Note: first-time HF ingest can take several minutes and needs network; prefer committing the 6 MB parquet.
 
-### 1.5 Public networking
+### 1.5 Port 8080 in logs (expected)
+
+Railway sets `PORT=8080` (or another dynamic port). Logs like:
+
+```text
+Uvicorn running on http://0.0.0.0:8080
+```
+
+are **correct** — do not change to 8000. The app reads `PORT` via `python run_api.py`.
+
+### 1.6 Public networking
 
 1. Railway service → **Settings** → **Networking** → **Generate domain**.
 2. Copy URL, e.g. `https://zomato-api-production.up.railway.app`.
