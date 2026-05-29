@@ -58,9 +58,17 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Allow Vercel preview/production origins when not using the Next.js proxy
+_vercel_cors_regex = (
+    r"https://([a-z0-9-]+\.)*vercel\.app"
+    if os.environ.get("CORS_ALLOW_VERCEL", "true").lower() in ("1", "true", "yes")
+    else None
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_settings.cors_origins_list,
+    allow_origin_regex=_vercel_cors_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -52,7 +52,7 @@ export function HomePage() {
         setMetaError(
           e instanceof Error
             ? e.message
-            : "Cannot reach API. Start backend: uvicorn src.api.main:app --port 8000"
+            : "Cannot reach API. Set NEXT_PUBLIC_API_URL on Vercel to your Railway URL."
         );
       }
     }

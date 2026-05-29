@@ -196,6 +196,8 @@ Set for **Production**, **Preview**, and **Development** as needed.
 
 > `NEXT_PUBLIC_*` is baked in at build time. After changing it, **redeploy** the frontend.
 
+The frontend uses a **same-origin API proxy** (`/api-proxy` → Railway) configured in `frontend/next.config.mjs`, so the browser does not hit CORS issues. You still must set `NEXT_PUBLIC_API_URL` so Vercel knows where to proxy requests.
+
 ### 2.4 Deploy
 
 1. Click **Deploy**.
