@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DineAI Desktop Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1a1c1c",
+                      "primary": "#b7122a",
+                      "outline-variant": "#e4bebc",
+                      "primary-fixed": "#ffdad8",
+                      "on-secondary-fixed-variant": "#45455b",
+                      "on-primary-container": "#fffbff",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#ffe16d",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#e2e0fc",
+                      "inverse-primary": "#ffb3b1",
+                      "tertiary-fixed-dim": "#e9c400",
+                      "on-tertiary-container": "#4c3f00",
+                      "surface-tint": "#bb162c",
+                      "surface-container-high": "#e8e8e8",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "on-tertiary-fixed": "#221b00",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container-highest": "#e2e2e2",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary": "#705d00",
+                      "outline": "#8f6f6e",
+                      "primary-container": "#db313f",
+                      "on-secondary-container": "#63627a",
+                      "surface-dim": "#dadada",
+                      "inverse-surface": "#2f3131",
+                      "error": "#ba1a1a",
+                      "on-background": "#1a1c1c",
+                      "surface-variant": "#e2e2e2",
+                      "background": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "secondary": "#5d5c74",
+                      "surface": "#f9f9f9",
+                      "secondary-fixed": "#e2e0fc",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#c9a900",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#92001c",
+                      "secondary-fixed-dim": "#c6c4df",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#5b403f",
+                      "on-secondary-fixed": "#1a1a2e",
+                      "primary-fixed-dim": "#ffb3b1",
+                      "on-primary-fixed": "#410007",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f3f3f3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "40px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px",
+                      "unit": "4px",
+                      "container-margin-mobile": "20px",
+                      "stack-sm": "8px",
+                      "gutter": "16px",
+                      "container-margin-desktop": "120px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-display": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "price-tag": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-display": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "price-tag": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ai-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-screen overflow-hidden flex font-body-md">
+<!-- TopAppBar equivalent handled by layout structure if needed, skipping per instruction to focus on 2-col dashboard -->
+<!-- SideNavBar -->
+<aside class="w-[350px] bg-surface-container-low flex flex-col h-full border-r border-outline-variant flex-shrink-0">
+<!-- Brand / Header -->
+<div class="p-stack-lg border-b border-outline-variant flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary">DineAI</h1>
+</div>
+<img alt="User Profile" class="w-10 h-10 rounded-full shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrOsk51G5UK7jbz7xY1tQ2kV6Fr7qlziVGm3eUBQiSGEIq9UPFYQV_fIRl4cLbXUC-PLqBXH5l_P1IA3BYTtRCvMaZdIT1n5QEL_gcr_TYURXKLS6fjwx5WoKdKLH2U_MJ_p8oCgoDHzYDIIlspG_Z5cfdyY3i9deXxF1cKtadqiWIUNlwoxlzLgbuK6Ee8thfxxZmJLA3VO4fKwD8muoJAas0d5n42S60pNKH1Z2KoIaJYMCNx3HsUJQm01CpM4vPyuAuogCEEiE"/>
+</div>
+<!-- Navigation / Shell -->
+<nav class="p-stack-lg flex-1 overflow-y-auto">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Your Preferences</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">location_on</span>
+                Bengaluru, India
+            </p>
+<ul class="space-y-stack-sm flex flex-col gap-2 mb-stack-lg border-b border-outline-variant pb-stack-lg">
+<!-- Active Item -->
+<li>
+<a class="flex items-center gap-3 p-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-primary-fixed/20 hover:bg-surface-container-high transition-all scale-[0.98] duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span class="font-label-md text-label-md">Preferences</span>
+</a>
+</li>
+<!-- Inactive Items -->
+<li>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-secondary-fixed-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-secondary-fixed-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">history</span>
+<span class="font-label-md text-label-md">History</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-secondary-fixed-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+<span class="font-label-md text-label-md">AI Insights</span>
+</a>
+</li>
+</ul>
+<!-- Preference Form Details -->
+<div class="space-y-stack-md">
+<div class="bg-surface-container p-4 rounded-lg"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">location_on</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-2 pl-10 pr-4 font-body-md text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search location..." type="text" value="Bangalore"/>
+</div></div>
+<div class="bg-surface-container p-4 rounded-lg"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Budget</label>
+<div class="flex p-1 bg-surface-container-high rounded-lg">
+<button class="flex-1 py-1.5 text-label-md font-medium rounded-md hover:bg-surface-container transition-colors">Low</button>
+<button class="flex-1 py-1.5 text-label-md font-medium rounded-md hover:bg-surface-container transition-colors">Mid</button>
+<button class="flex-1 py-1.5 text-label-md font-medium rounded-md bg-primary text-on-primary shadow-sm">High</button>
+</div></div>
+<div class="bg-surface-container p-4 rounded-lg"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Cuisine</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container border border-outline-variant rounded-lg py-2 pl-3 pr-10 font-body-md text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+<option selected="">Asian</option>
+<option>Mediterranean</option>
+<option>Chinese</option>
+<option>Japanese</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div></div>
+<div class="bg-surface-container p-4 rounded-lg"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Minimum Rating</label>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 border border-outline-variant rounded-lg text-label-sm font-medium hover:bg-surface-container transition-colors">3.0+</button>
+<button class="flex-1 py-1.5 border border-outline-variant rounded-lg text-label-sm font-medium hover:bg-surface-container transition-colors">4.0+</button>
+<button class="flex-1 py-1.5 bg-primary-container text-on-primary-container border border-primary-container rounded-lg text-label-sm font-bold shadow-sm">4.5+</button>
+</div></div>
+<div class="bg-surface-container p-4 rounded-lg"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Recommendations Count</label>
+<div class="flex items-center justify-between bg-surface-container p-2 rounded-lg">
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="font-body-md font-bold text-on-surface">5</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div></div>
+</div>
+</nav>
+<div class="p-stack-lg border-t border-outline-variant bg-surface-container-low mt-auto">
+<button class="w-full bg-primary hover:bg-surface-tint text-on-primary font-label-md text-label-md py-3 px-4 rounded-lg transition-colors shadow-sm font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                Get Recommendations
+            </button>
+</div>
+</aside>
+<!-- Main Panel -->
+<main class="flex-1 bg-surface flex flex-col h-full overflow-hidden">
+<!-- Header area for main content -->
+<header class="bg-surface px-container-margin-desktop py-stack-lg sticky top-0 z-40 shadow-sm border-b border-surface-variant">
+<div class="max-w-5xl mx-auto w-full">
+<!-- AI Summary Card -->
+<div class="ai-glass border border-secondary-container rounded-xl p-stack-lg shadow-sm relative overflow-hidden bg-gradient-to-br from-primary-fixed/10 to-transparent">
+<div class="absolute top-0 right-0 -mt-4 -mr-4 text-primary-fixed opacity-50">
+<span class="material-symbols-outlined text-[120px]">restaurant_menu</span>
+</div>
+<div class="flex items-start gap-stack-md relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2 text-on-surface">Curated by AI</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                                Based on your preference for Asian cuisine and a high budget in Bangalore, here are top-rated venues with strong reviews and premium dining experiences.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto px-container-margin-desktop py-stack-lg">
+<div class="max-w-5xl mx-auto w-full">
+<h3 class="font-headline-display text-headline-display mb-stack-lg text-on-surface">Top picks (5 restaurants)</h3>
+<div class="space-y-stack-lg pb-section-gap">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col md:flex-row transition-shadow hover:shadow-md">
+<!-- Image Container -->
+<div class="w-full md:w-[320px] h-[240px] md:h-auto relative flex-shrink-0">
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-bold px-3 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1">
+<span>#1</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 text-on-surface font-bold px-2 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.9
+                            </div>
+<img class="w-full h-full object-cover" data-alt="A beautifully plated Asian fusion dish in a high-end restaurant setting. The lighting is moody and sophisticated, highlighting the vibrant colors of the food against a dark, textured tabletop. The overall aesthetic is premium, modern, and appetizing, fitting for a top-tier dining experience in Bangalore. The color palette incorporates deep reds and warm tones to complement the DineAI brand style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ4XSNKaouevIwdfj0YlYUlxHdQe_CIeu5iRhlxM9Dnwl6qZtX4-HKHbg6UN6HIleUYlaSDYpYEB01BrZbF2VKRXhExikdMHL9ESinY_fFYZ5HFo52KXph5ARwm8Ll6ySjmSumG5zeJDgfQnvJmx8JWYY0M2nN-eNPw1w89JLiIdBan47c2gYZARttfBCz687_4UwAe_aJtBQTfxQerFA3MH9MmBivtj1XoC4kkWFZl22HzcUVR5DmGO4GZyyxCkMZyNp7bqcpPPw"/>
+</div>
+<!-- Content -->
+<div class="p-stack-lg flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-stack-sm">
+<div>
+<h4 class="font-headline-lg text-headline-lg text-on-surface mb-1">Flechazo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        Whitefield, Bangalore
+                                    </p>
+</div>
+<div class="font-price-tag text-price-tag text-on-surface bg-surface-container px-3 py-1 rounded-full">
+                                    ₹1400 for two
+                                </div>
+</div>
+<div class="flex gap-2 mb-stack-md">
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Asian</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Mediterranean</span>
+</div>
+<!-- AI Insight Box -->
+<div class="mt-auto bg-surface-container-low rounded-lg p-4 border-l-4 border-primary flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-on-surface font-semibold">AI Match:</strong> Flechazo offers Asian and Mediterranean dishes with a 4.9 rating, fitting your high budget and Asian cuisine preference in Whitefield, Bangalore.
+                                </p>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col md:flex-row transition-shadow hover:shadow-md">
+<div class="w-full md:w-[320px] h-[240px] md:h-auto relative flex-shrink-0">
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-bold px-3 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1">
+<span>#2</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 text-on-surface font-bold px-2 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.9
+                            </div>
+<img class="w-full h-full object-cover" data-alt="An elegant, dimly lit interior of an authentic Asian kitchen restaurant. A chef can be seen in the background working in an open kitchen, while the foreground features a pristine table setting with dim sum and a steaming bowl. The lighting is warm and inviting, emphasizing a luxurious dining experience. The scene conveys high quality and premium service, aligned with the DineAI premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARCkH-WghGS4gJbXHMcEzwT5CWRWEk5Kku4k4By0Vuw8WY3Sk3Llxf43OC0HE5QbpC6EgLrGxQ60de4WMr0L0Zm8h8y6M78xM2WxbJ_9adMMViM8bz-66K030rENDisZ2pGd-UXf3xiqJX3jcx_zLCdwZvTadaKOEFqjWf6aK3GppUbmYpp-rNHFVNsQdKSIE8MOB2_0fUXzBai4LZaFyOz4Is0OvGm_9vWebOXQa-dJBPPdcxReuL7itdEYY6i_iT4_3t3NRETJ0"/>
+</div>
+<div class="p-stack-lg flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-stack-sm">
+<div>
+<h4 class="font-headline-lg text-headline-lg text-on-surface mb-1">Asia Kitchen By Mainland China</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        Koramangala, Bangalore
+                                    </p>
+</div>
+<div class="font-price-tag text-price-tag text-on-surface bg-surface-container px-3 py-1 rounded-full">
+                                    ₹1500 for two
+                                </div>
+</div>
+<div class="flex gap-2 mb-stack-md">
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Asian</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Chinese</span>
+</div>
+<div class="mt-auto bg-surface-container-low rounded-lg p-4 border-l-4 border-primary flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-on-surface font-semibold">AI Match:</strong> Known for authentic flavors and premium service, this fits your high-budget Asian craving in the heart of Koramangala.
+                                </p>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col md:flex-row transition-shadow hover:shadow-md">
+<div class="w-full md:w-[320px] h-[240px] md:h-auto relative flex-shrink-0">
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-bold px-3 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1">
+<span>#3</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 text-on-surface font-bold px-2 py-1 rounded-md text-sm z-10 shadow-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.7
+                            </div>
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a premium sushi platter and a steaming bowl of rich ramen on a minimalist wooden table. The setting is a sophisticated modern Asian restaurant with soft, focused spotlighting highlighting the freshness and vibrant colors of the food. The atmosphere is upscale and refined, perfect for a high-budget dining recommendation. The visual style is crisp, clean, and highly appetizing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfq7jZYM6BwHdqRCBYklgDoIe4ST_z-ug_VEPxepo1l1jYWJR4PcMd0igWusTLoL7B32P2BiAs1mb0BogeK1h5_GJB1xHtWkIN5reTg5qMbxBrQY588ryioC6ez_rsAUwBFPG3la0TP5apUQKrfkrnM9CDIsDUY-bsSas5zy-6A4ma17Mzz4lxXv4AffDsjfS-8oFuxNiPAeWDhOOqQAkfSx_HCkypjwHOZrblfnfZEQ7Ih-ox2Vh6Yys7oKka8yRh5YhRs6igKZ4"/>
+</div>
+<div class="p-stack-lg flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-stack-sm">
+<div>
+<h4 class="font-headline-lg text-headline-lg text-on-surface mb-1">You Mee</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        Orion Mall, Bangalore
+                                    </p>
+</div>
+<div class="font-price-tag text-price-tag text-on-surface bg-surface-container px-3 py-1 rounded-full">
+                                    ₹2000 for two
+                                </div>
+</div>
+<div class="flex gap-2 mb-stack-md">
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Japanese</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Sushi</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface">Asian</span>
+</div>
+<div class="mt-auto bg-surface-container-low rounded-lg p-4 border-l-4 border-primary flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-on-surface font-semibold">AI Match:</strong> A top-tier choice for sushi and ramen enthusiasts with a sophisticated ambiance that matches your high-budget profile.
+                                </p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #b7122a;
+  --on-surface: #1a1c1c;
+  --on-surface-variant: #5b403f;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  @apply h-full overflow-hidden bg-surface text-on-surface antialiased;
+}
+
+/* Single scroll: results panel only; sidebar scroll hidden when filters overflow */
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Native selects: hide OS chevron; custom icon in SelectField */
+.select-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+}
+
+.select-input::-ms-expand {
+  display: none;
+}
